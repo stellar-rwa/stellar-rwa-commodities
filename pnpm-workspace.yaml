@@ -2,8 +2,5 @@ packages:
   - 'frontend'
   - 'backend'
   - 'contracts'
-  - 'oracle'
-  - 'scraper'
-  - 'notifications'
   - 'monitoring'
   - 'constants'
