@@ -3,29 +3,40 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Total Value Locked", value: "$142.5M", sub: "+12.3% this month" },
-  { label: "Active Holders", value: "24,812", sub: "Across 140 countries" },
-  { label: "Avg. Settlement", value: "5.2s", sub: "Network finality" },
-  { label: "Transaction Fee", value: "<$0.01", sub: "Fixed network cost" },
+  { label: "Total Valued Locked", value: "$4.27B", sub: "Institutional liquidity", trend: "+18.4%" },
+  { label: "Active Nodes", value: "842", sub: "Distributed globally", trend: "Verified" },
+  { label: "Avg. Latency", value: "128ms", sub: "Sub-second finality", trend: "-45.2%" },
+  { label: "Protocol Security", value: "SOC-2", sub: "Type II compliant", trend: "Grade A" },
 ];
 
 export function StatsSection() {
   return (
-    <section className="py-12 bg-surface/30 border-y border-border/40">
+    <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="group"
             >
-              <p className="text-sm font-medium text-muted-text uppercase tracking-widest mb-2">{stat.label}</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</h2>
-              <p className="text-xs text-gold font-medium">{stat.sub}</p>
+              <div className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.3em] mb-4 group-hover:text-gold transition-colors">
+                {stat.label}
+              </div>
+              <div className="flex items-baseline gap-2 mb-2">
+                <h2 className="text-4xl md:text-5xl font-black text-white group-hover:text-glow transition-all">
+                  {stat.value}
+                </h2>
+                <span className="text-[10px] font-black text-emerald uppercase tracking-tighter bg-emerald/10 px-2 py-0.5 rounded-full">
+                  {stat.trend}
+                </span>
+              </div>
+              <p className="text-xs text-zinc-400 font-light italic">
+                {stat.sub}
+              </p>
             </motion.div>
           ))}
         </div>
