@@ -1,42 +1,183 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-mono: "DM Mono", monospace;
 
-  --color-background: #0a0a0f;
-  --color-foreground: #ffffff;
-  --color-surface: #0f0f1a;
-  --color-border: #1e1e2e;
-  --color-gold: #c9a84c;
-  --color-gold-light: #e8c96a;
-  --color-stellar-blue: #1a6af4;
-  --color-success: #22c55e;
-  --color-danger: #ef4444;
-  --color-muted-text: #8a8a9a;
+  /* Celestial Vault Palette - Institutional Grade */
+  --color-void: #050810;
+  --color-stellar-dark: #0A0F1E;
+  --color-vault: #0F1629;
+  
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8C87A;
+  --color-gold-dark: #7A5C1E;
+  
+  --color-platinum: #A8B4C8;
+  --color-copper: #B87B4E;
+  --color-stellar-blue: #1C8EF0;
+  --color-deep-stellar-blue: #0B4D9E;
 
-  /* shadcn variables mapping */
-  --color-card: var(--color-surface);
-  --color-card-foreground: var(--color-foreground);
-  --color-popover: var(--color-surface);
-  --color-popover-foreground: var(--color-foreground);
-  --color-primary: var(--color-gold);
-  --color-primary-foreground: #000000;
-  --color-secondary: var(--color-surface);
-  --color-secondary-foreground: var(--color-foreground);
-  --color-muted: var(--color-surface);
-  --color-muted-foreground: var(--color-muted-text);
-  --color-accent: var(--color-surface);
-  --color-accent-foreground: var(--color-foreground);
-  --color-destructive: var(--color-danger);
-  --color-destructive-foreground: var(--color-foreground);
-  --color-input: var(--color-border);
-  --color-ring: var(--color-gold);
+  --color-ascent-green: #22C55E;
+  --color-correction-rose: #F43F5E;
+  --color-neutral-zinc: #71717A;
+
+  --color-celestial-white: #F4F6FA;
+  --color-ghost-white: #C8CFDF;
+  --color-void-mist: #7883A0;
+
+  --color-background: var(--color-void);
+  --color-foreground: var(--color-celestial-white);
+  
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
 }
 
 @layer base {
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap');
+  }
+  @font-face {
+    font-family: 'DM Mono';
+    src: url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+  }
+  @font-face {
+    font-family: 'Outfit';
+    src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+  }
+
   body {
     background-color: var(--color-background);
-    color: var(--color-foreground);
+    color: var(--color-ghost-white); /* Rule 8: Primary body is Ghost White */
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image: 
+      radial-gradient(ellipse 60% 40% at 20% 30%, rgba(201, 168, 76, 0.05), transparent 70%),
+      radial-gradient(ellipse 50% 60% at 80% 20%, rgba(28, 142, 240, 0.04), transparent 70%);
+    background-attachment: fixed;
+    position: relative;
   }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-celestial-white); /* Rule 8: Headers are Celestial White */
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(15, 22, 45, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    border-top: 1px solid rgba(201, 168, 76, 0.25);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 32px 64px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #E8C87A 0%, #C9A84C 45%, #7A5C1E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Rule 8: Primary Button - Dark text on Gold */
+  .btn-primary {
+    background: linear-gradient(135deg, #E8C87A 0%, #C9A84C 100%);
+    color: #050810;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(201, 168, 76, 0.2);
+  }
+
+  /* Rule 8: Secondary Button - Gold text on transparent */
+  .btn-secondary {
+    background: transparent;
+    color: #E8C87A;
+    border: 1.5px solid #C9A84C;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .btn-secondary:hover {
+    background: rgba(201, 168, 76, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  }
+
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C9A84C 20%, #C9A84C 80%, transparent);
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer-anim 3s infinite linear;
+  }
+}
+
+@keyframes shimmer-anim {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.3); opacity: 0.8; }
+  80%, 100% { transform: scale(1.2); opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.9; }
+}
+
+.animate-twinkle {
+  animation: twinkle var(--duration, 3s) ease-in-out infinite;
 }
