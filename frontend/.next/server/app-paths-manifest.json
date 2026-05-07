@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/commodities/route": "app/api/commodities/route.js",
+  "/api/health/route": "app/api/health/route.js",
+  "/api/stellar/account/route": "app/api/stellar/account/route.js",
+  "/api/stellar/submit/route": "app/api/stellar/submit/route.js",
+  "/api/stellar/transactions/route": "app/api/stellar/transactions/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/marketplace/[assetCode]/page": "app/marketplace/[assetCode]/page.js",
+  "/marketplace/page": "app/marketplace/page.js",
+  "/page": "app/page.js"
+}

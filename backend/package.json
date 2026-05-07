@@ -1,0 +1,18 @@
+{
+  "name": "@stellar-commodity/backend",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@stellar/stellar-sdk": "^15.1.0",
+    "@vercel/postgres": "^0.10.0",
+    "axios": "^1.16.0",
+    "drizzle-orm": "^0.45.2",
+    "next": "16.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
+  }
+}

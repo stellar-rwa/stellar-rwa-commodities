@@ -1,0 +1,51 @@
+# Stellar Info File (SEP-0001)
+# https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0001.md
+
+NETWORK_PASSPHRASE="Test SDF Network ; September 2015"
+FEDERATION_SERVER="https://stellar-rwa-commodities.vercel.app/api/sep/federation"
+AUTH_SERVER="https://stellar-rwa-commodities.vercel.app/api/sep/sep010/challenge"
+KYC_SERVER="https://stellar-rwa-commodities.vercel.app/api/sep/sep012"
+TRANSFER_SERVER="https://stellar-rwa-commodities.vercel.app/api/sep/sep024"
+
+[[CURRENCIES]]
+code="XGLD"
+issuer="G..."
+display_decimals=7
+name="Stellar Gold"
+desc="Tokenized physical gold bullion"
+conditions="Backed 1:1 by LBMA-certified gold bars."
+image="https://stellar-rwa-commodities.vercel.app/assets/gold.png"
+
+[[CURRENCIES]]
+code="XSLV"
+issuer="G..."
+display_decimals=7
+name="Stellar Silver"
+desc="Tokenized physical silver"
+conditions="Backed 1:1 by fine silver reserves."
+image="https://stellar-rwa-commodities.vercel.app/assets/silver.png"
+
+[[CURRENCIES]]
+code="XOIL"
+issuer="G..."
+display_decimals=7
+name="Stellar Crude Oil"
+desc="Tokenized Brent Crude barrels"
+conditions="Backed 1:1 by physical oil storage receipts."
+image="https://stellar-rwa-commodities.vercel.app/assets/oil.png"
+
+[[CURRENCIES]]
+code="XWHT"
+issuer="G..."
+display_decimals=7
+name="Stellar Wheat"
+desc="Tokenized premium wheat"
+conditions="Backed 1:1 by grain elevator receipts."
+image="https://stellar-rwa-commodities.vercel.app/assets/wheat.png"
+
+[DOCUMENTATION]
+ORG_NAME="StellarCommodity"
+ORG_URL="https://stellar-rwa-commodities.vercel.app"
+ORG_DESCRIPTION="Tokenizing physical commodities on the Stellar blockchain."
+ORG_TWITTER="stellar_commod"
+ORG_GITHUB="https://github.com/stellar-rwa-commodities"

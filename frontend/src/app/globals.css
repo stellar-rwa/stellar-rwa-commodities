@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #0a0a0f;
+  --color-foreground: #ffffff;
+  --color-surface: #0f0f1a;
+  --color-border: #1e1e2e;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c96a;
+  --color-stellar-blue: #1a6af4;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-muted-text: #8a8a9a;
+
+  /* shadcn variables mapping */
+  --color-card: var(--color-surface);
+  --color-card-foreground: var(--color-foreground);
+  --color-popover: var(--color-surface);
+  --color-popover-foreground: var(--color-foreground);
+  --color-primary: var(--color-gold);
+  --color-primary-foreground: #000000;
+  --color-secondary: var(--color-surface);
+  --color-secondary-foreground: var(--color-foreground);
+  --color-muted: var(--color-surface);
+  --color-muted-foreground: var(--color-muted-text);
+  --color-accent: var(--color-surface);
+  --color-accent-foreground: var(--color-foreground);
+  --color-destructive: var(--color-danger);
+  --color-destructive-foreground: var(--color-foreground);
+  --color-input: var(--color-border);
+  --color-ring: var(--color-gold);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}

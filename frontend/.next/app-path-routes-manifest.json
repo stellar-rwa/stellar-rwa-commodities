@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/commodities/route": "/api/commodities",
+  "/api/health/route": "/api/health",
+  "/api/stellar/account/route": "/api/stellar/account",
+  "/api/stellar/submit/route": "/api/stellar/submit",
+  "/api/stellar/transactions/route": "/api/stellar/transactions",
+  "/dashboard/page": "/dashboard",
+  "/favicon.ico/route": "/favicon.ico",
+  "/marketplace/[assetCode]/page": "/marketplace/[assetCode]",
+  "/marketplace/page": "/marketplace",
+  "/page": "/"
+}

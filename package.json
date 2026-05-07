@@ -1,0 +1,16 @@
+{
+  "name": "stellar-commodity-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --recursive build",
+    "lint": "pnpm --recursive lint",
+    "test": "pnpm --recursive test",
+    "contracts:build": "stellar contract build",
+    "contracts:test": "cargo test"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "eslint": "^9.0.0"
+  }
+}

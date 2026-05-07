@@ -1,0 +1,3 @@
+{
+  "/api/stellar/transactions/route": "app/api/stellar/transactions/route.js"
+}

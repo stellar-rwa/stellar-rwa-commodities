@@ -1,0 +1,6 @@
+[workspace]
+members = ["commodity_token", "oracle", "compliance"]
+resolver = "2"
+
+[workspace.dependencies]
+soroban-sdk = { version = "25.3.1" }

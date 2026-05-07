@@ -1,0 +1,38 @@
+export const COMMODITY_ASSETS = [
+  {
+    code: "XGLD",
+    name: "Gold",
+    issuer: "G...",
+    description: "Physical gold bullion, vaulted and audited.",
+    decimals: 7,
+    type: "commodity",
+    color: "#c9a84c",
+  },
+  {
+    code: "XSLV",
+    name: "Silver",
+    issuer: "G...",
+    description: "Fine silver reserves, tokenized for trade.",
+    decimals: 7,
+    type: "commodity",
+    color: "#94a3b8",
+  },
+  {
+    code: "XOIL",
+    name: "Crude Oil",
+    issuer: "G...",
+    description: "Brent Crude barrels, fractionalized.",
+    decimals: 7,
+    type: "commodity",
+    color: "#1e293b",
+  },
+  {
+    code: "XWHT",
+    name: "Wheat",
+    issuer: "G...",
+    description: "Premium wheat bushels, globally tradable.",
+    decimals: 7,
+    type: "commodity",
+    color: "#f59e0b",
+  },
+];
