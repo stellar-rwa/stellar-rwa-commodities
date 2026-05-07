@@ -10,7 +10,11 @@
     "contracts:test": "cargo test"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
-    "eslint": "^9.0.0"
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "15.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "15.0.0",
+    "prettier": "^3.0.0"
   }
 }
