@@ -3,18 +3,17 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { CommoditiesSection } from "@/components/sections/CommoditiesSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { TechStackSection } from "@/components/sections/TechStackSection";
+import { ContributeSection } from "@/components/sections/ContributeSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-32 pb-32">
+    <div className="flex flex-col gap-24 pb-24">
       <HeroSection />
-      <div className="relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <StatsSection />
-      </div>
+      <StatsSection />
       <CommoditiesSection />
       <HowItWorksSection />
       <TechStackSection />
+      <ContributeSection />
     </div>
   );
 }

@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
 
-  --color-background: #020617;
-  --color-foreground: #f8fafc;
-  --color-surface: rgba(15, 23, 42, 0.8);
-  --color-border: rgba(255, 255, 255, 0.08);
-  
-  --color-gold: #eab308;
-  --color-gold-muted: #a16207;
-  --color-emerald: #10b981;
-  --color-ruby: #f43f5e;
+  --color-background: #0a0a0f;
+  --color-foreground: #ffffff;
+  --color-surface: #0f0f1a;
+  --color-border: #1e1e2e;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c96a;
+  --color-stellar-blue: #1a6af4;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-muted-text: #8a8a9a;
 
   /* shadcn variables mapping */
   --color-card: var(--color-surface);
@@ -20,67 +21,22 @@
   --color-popover: var(--color-surface);
   --color-popover-foreground: var(--color-foreground);
   --color-primary: var(--color-gold);
-  --color-primary-foreground: #020617;
-  --color-secondary: rgba(30, 41, 59, 0.5);
+  --color-primary-foreground: #000000;
+  --color-secondary: var(--color-surface);
   --color-secondary-foreground: var(--color-foreground);
-  --color-muted: rgba(30, 41, 59, 0.5);
-  --color-muted-foreground: #94a3b8;
-  --color-accent: rgba(30, 41, 59, 0.5);
+  --color-muted: var(--color-surface);
+  --color-muted-foreground: var(--color-muted-text);
+  --color-accent: var(--color-surface);
   --color-accent-foreground: var(--color-foreground);
-  --color-destructive: var(--color-ruby);
+  --color-destructive: var(--color-danger);
   --color-destructive-foreground: var(--color-foreground);
   --color-input: var(--color-border);
   --color-ring: var(--color-gold);
-  
-  --radius-lg: 1rem;
-  --radius-md: 0.75rem;
-  --radius-sm: 0.5rem;
 }
 
 @layer base {
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    background-image: 
-      radial-gradient(at 0% 0%, rgba(234, 179, 8, 0.03) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.03) 0px, transparent 50%);
-    background-attachment: fixed;
-    -webkit-font-smoothing: antialiased;
   }
-}
-
-@layer utilities {
-  .glass {
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  }
-
-  .gold-gradient {
-    background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .text-glow {
-    text-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
-  }
-
-  .premium-border {
-    border: 1px solid transparent;
-    background: linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
-                linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02)) border-box;
-  }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
 }
