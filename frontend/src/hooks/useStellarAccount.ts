@@ -8,6 +8,7 @@ export function useStellarAccount(address: string | null) {
 
   useEffect(() => {
     if (!address) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setAccount(null);
       return;
     }
